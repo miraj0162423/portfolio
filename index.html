@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Miraj Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Miraj | Front-End Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -13,35 +14,35 @@
         }
 
         body{
-            background:#f4f4f4;
+            background:#f5f5f5;
             color:#333;
         }
 
         header{
-            background:#111;
+            background:#0f172a;
             color:white;
-            padding:30px 20px;
             text-align:center;
+            padding:40px 20px;
         }
 
         header h1{
-            font-size:36px;
+            font-size:38px;
         }
 
         header p{
             margin-top:10px;
+            color:#cbd5e1;
             font-size:18px;
-            color:#ccc;
         }
 
         section{
-            padding:60px 20px;
+            padding:70px 20px;
         }
 
         h2{
             text-align:center;
             margin-bottom:40px;
-            font-size:28px;
+            font-size:30px;
         }
 
         .services{
@@ -53,11 +54,16 @@
 
         .card{
             background:white;
-            padding:25px;
             width:280px;
-            border-radius:10px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            padding:30px 20px;
+            border-radius:12px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
             text-align:center;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
         }
 
         .card h3{
@@ -65,16 +71,11 @@
         }
 
         .about{
-            display:flex;
-            justify-content:center;
-            text-align:center;
-        }
-
-        .about-text{
-            max-width:700px;
+            max-width:750px;
             margin:auto;
+            text-align:center;
             font-size:18px;
-            line-height:1.6;
+            line-height:1.7;
         }
 
         .contact{
@@ -82,12 +83,22 @@
         }
 
         .contact p{
-            font-size:18px;
             margin:10px 0;
+            font-size:18px;
+        }
+
+        .contact a{
+            color:#2563eb;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .contact a:hover{
+            text-decoration:underline;
         }
 
         footer{
-            background:#111;
+            background:#0f172a;
             color:white;
             text-align:center;
             padding:20px;
@@ -114,43 +125,44 @@
     <div class="services">
         <div class="card">
             <h3>Website Design</h3>
-            <p>Clean and modern responsive website design.</p>
+            <p>Clean, modern and fully responsive website design.</p>
         </div>
 
         <div class="card">
             <h3>Landing Page</h3>
-            <p>High-converting landing page for business and marketing.</p>
+            <p>High-converting landing pages for business and marketing.</p>
         </div>
 
         <div class="card">
             <h3>Website Redesign</h3>
-            <p>Upgrade your old website into a modern professional look.</p>
+            <p>Upgrade old websites into modern professional designs.</p>
         </div>
     </div>
 </section>
 
-<section class="about">
-    <div class="about-text">
-        <h2>About Me</h2>
-        <p>
+<section>
+    <h2>About Me</h2>
+    <div class="about">
         Hi, I'm Miraj, a passionate front-end web developer. 
-        I create professional, modern and fully responsive websites 
-        using HTML and CSS. My goal is to deliver clean design 
-        and quality work for every client.
-        </p>
+        I create professional, modern and fully responsive websites using HTML and CSS. 
+        My goal is to deliver clean design and quality work for every client.
     </div>
 </section>
 
 <section class="contact">
     <h2>Contact Me</h2>
     <p>If you want to work with me, feel free to contact me anytime.</p>
-    <p><strong>Email:</strong> miraj016242372@gmail.com</p>
+    <p><strong>Email:</strong> 
+        <a href="mailto:miraj016242372@gmail.com">
+        miraj016242372@gmail.com
+        </a>
+    </p>
     <p><strong>Location:</strong> Bangladesh</p>
     <p><strong>Available for:</strong> Freelance Projects</p>
 </section>
 
 <footer>
-    <p>© 2026 Miraj | All Rights Reserved</p>
+    © 2026 Miraj | All Rights Reserved
 </footer>
 
 </body>
