@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miraj | Professional Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#f4f7fc;
+        }
+
+        header{
+            background:#111;
+            color:white;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h1{
+            font-size:22px;
+        }
+
+        header a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        header a:hover{
+            color:#00ccff;
+        }
+
+        .hero{
+            height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:linear-gradient(to right,#0066ff,#00ccff);
+            color:white;
+            padding:20px;
+        }
+
+        .hero h2{
+            font-size:42px;
+            margin-bottom:20px;
+            animation:fadeIn 2s ease-in-out;
+        }
+
+        .hero p{
+            margin-bottom:30px;
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0; transform:translateY(-30px);}
+            to{opacity:1; transform:translateY(0);}
+        }
+
+        .btn{
+            padding:12px 25px;
+            background:white;
+            color:#0066ff;
+            border:none;
+            cursor:pointer;
+            margin:5px;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#111;
+            color:white;
+        }
+
+        .services{
+            padding:80px 10%;
+            text-align:center;
+            background:white;
+        }
+
+        .services h2{
+            margin-bottom:40px;
+        }
+
+        .service-box{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .card{
+            background:#f4f7fc;
+            padding:30px;
+            width:280px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .about{
+            padding:80px 10%;
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            gap:40px;
+            background:#eef3ff;
+        }
+
+        .about img{
+            width:100%;
+            max-width:400px;
+            border-radius:10px;
+        }
+
+        .contact{
+            padding:80px 10%;
+            text-align:center;
+            background:white;
+        }
+
+        .contact input,
+        .contact textarea{
+            width:100%;
+            max-width:500px;
+            padding:12px;
+            margin:10px auto;
+            display:block;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        footer{
+            background:#111;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            .about{
+                flex-direction:column;
+                text-align:center;
+            }
+            .hero h2{
+                font-size:28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Miraj | Web Developer</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h2>I Build Modern & Responsive Websites</h2>
+        <p>Professional Front-End Web Developer Helping Businesses Grow Online</p>
+        <button class="btn">Hire Me</button>
+        <button class="btn">Contact Me</button>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>My Services</h2>
+    <div class="service-box">
+        <div class="card">
+            <h3>Website Design</h3>
+            <p>Clean and modern responsive website design.</p>
+        </div>
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>High-converting landing page for business and marketing.</p>
+        </div>
+        <div class="card">
+            <h3>Website Redesign</h3>
+            <p>Upgrade your old website into a modern professional look.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <img src="https://via.placeholder.com/400" alt="About Image">
+    <div>
+        <h2>About Me</h2>
+        <p>Hi, I'm Miraj, a passionate front-end web developer. I create professional, modern and fully responsive websites using HTML and CSS. My goal is to deliver clean design and quality work for every client.</p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button class="btn">Send Message</button>
+</section>
+
+<footer>
+    © 2026 Miraj | Professional Web Developer. All Rights Reserved.
+</footer>
+
+</body>
+</html>
