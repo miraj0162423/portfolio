@@ -1,226 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Miraj | Professional Web Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miraj | Professional Web Developer</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins', sans-serif;
-            scroll-behavior:smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
 
-        body{
-            background:#f4f7fc;
-        }
+body{
+    line-height:1.6;
+    color:#333;
+}
 
-        header{
-            background:#111;
-            color:white;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+/* Navbar */
+nav{
+    background:#111;
+    color:#fff;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
 
-        header h1{
-            font-size:22px;
-        }
+nav h2{
+    font-weight:600;
+}
 
-        header a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-        }
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
 
-        header a:hover{
-            color:#00ccff;
-        }
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
 
-        .hero{
-            height:90vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(to right,#0066ff,#00ccff);
-            color:white;
-            padding:20px;
-        }
+/* Hero */
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#007bff,#00c6ff);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    color:#fff;
+}
 
-        .hero h2{
-            font-size:42px;
-            margin-bottom:20px;
-            animation:fadeIn 2s ease-in-out;
-        }
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
 
-        .hero p{
-            margin-bottom:30px;
-        }
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+}
 
-        @keyframes fadeIn{
-            from{opacity:0; transform:translateY(-30px);}
-            to{opacity:1; transform:translateY(0);}
-        }
+.btn{
+    padding:12px 30px;
+    border:none;
+    background:#fff;
+    color:#007bff;
+    font-weight:600;
+    cursor:pointer;
+    margin:5px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+}
 
-        .btn{
-            padding:12px 25px;
-            background:white;
-            color:#0066ff;
-            border:none;
-            cursor:pointer;
-            margin:5px;
-            font-weight:500;
-            transition:0.3s;
-        }
+/* Section */
+section{
+    padding:80px 10%;
+}
 
-        .btn:hover{
-            background:#111;
-            color:white;
-        }
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:50px;
+}
 
-        .services{
-            padding:80px 10%;
-            text-align:center;
-            background:white;
-        }
+/* Services */
+.services{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
 
-        .services h2{
-            margin-bottom:40px;
-        }
+.service-box{
+    background:#f4f4f4;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+}
 
-        .service-box{
-            display:flex;
-            gap:20px;
-            flex-wrap:wrap;
-            justify-content:center;
-        }
+/* About */
+.about{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
 
-        .card{
-            background:#f4f7fc;
-            padding:30px;
-            width:280px;
-            border-radius:10px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.1);
-            transition:0.3s;
-        }
+.about img{
+    width:300px;
+    border-radius:10px;
+}
 
-        .card:hover{
-            transform:translateY(-10px);
-        }
+.about-text{
+    max-width:600px;
+}
 
-        .about{
-            padding:80px 10%;
-            display:flex;
-            flex-wrap:wrap;
-            align-items:center;
-            gap:40px;
-            background:#eef3ff;
-        }
+/* Contact */
+.contact form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
 
-        .about img{
-            width:100%;
-            max-width:400px;
-            border-radius:10px;
-        }
+.contact input,
+.contact textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
 
-        .contact{
-            padding:80px 10%;
-            text-align:center;
-            background:white;
-        }
+.contact button{
+    padding:12px;
+    border:none;
+    background:#007bff;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    cursor:pointer;
+}
 
-        .contact input,
-        .contact textarea{
-            width:100%;
-            max-width:500px;
-            padding:12px;
-            margin:10px auto;
-            display:block;
-            border:1px solid #ccc;
-            border-radius:5px;
-        }
+/* Footer */
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
 
-        footer{
-            background:#111;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:32px;
+    }
 
-        @media(max-width:768px){
-            .about{
-                flex-direction:column;
-                text-align:center;
-            }
-            .hero h2{
-                font-size:28px;
-            }
-        }
-    </style>
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Miraj | Web Developer</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<nav>
+    <h2>Miraj | Web Developer</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <section class="hero" id="home">
-    <div>
-        <h2>I Build Modern & Responsive Websites</h2>
-        <p>Professional Front-End Web Developer Helping Businesses Grow Online</p>
-        <button class="btn">Hire Me</button>
-        <button class="btn">Contact Me</button>
-    </div>
+    <h1>I Build Modern & Responsive Websites</h1>
+    <p>Professional Front-End Web Developer Helping Businesses Grow Online</p>
+    <a href="#contact" class="btn">Hire Me</a>
+    <a href="#contact" class="btn">Contact Me</a>
 </section>
 
-<section class="services" id="services">
-    <h2>My Services</h2>
-    <div class="service-box">
-        <div class="card">
+<section id="services">
+    <h2 class="section-title">My Services</h2>
+    <div class="services">
+        <div class="service-box">
             <h3>Website Design</h3>
             <p>Clean and modern responsive website design.</p>
         </div>
-        <div class="card">
+        <div class="service-box">
             <h3>Landing Page</h3>
             <p>High-converting landing page for business and marketing.</p>
         </div>
-        <div class="card">
+        <div class="service-box">
             <h3>Website Redesign</h3>
             <p>Upgrade your old website into a modern professional look.</p>
         </div>
     </div>
 </section>
 
-<section class="about">
-    <img src="https://via.placeholder.com/400" alt="About Image">
-    <div>
-        <h2>About Me</h2>
-        <p>Hi, I'm Miraj, a passionate front-end web developer. I create professional, modern and fully responsive websites using HTML and CSS. My goal is to deliver clean design and quality work for every client.</p>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+        <img src="https://via.placeholder.com/300" alt="About Image">
+        <div class="about-text">
+            <p>Hi, I'm Miraj, a passionate front-end web developer. I create professional, modern and fully responsive websites using HTML and CSS. My goal is to deliver clean design and quality work for every client.</p>
+        </div>
     </div>
 </section>
 
 <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea rows="5" placeholder="Your Message"></textarea>
-    <button class="btn">Send Message</button>
+    <h2 class="section-title">Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <footer>
-    © 2026 Miraj | Professional Web Developer. All Rights Reserved.
+    © 2026 Miraj | All Rights Reserved
 </footer>
 
 </body>
